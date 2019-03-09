@@ -27,10 +27,16 @@ console.log(DEFAULT_BOBA.myReviewAsList);
 
 class MyBoba extends Component {
   state = DEFAULT_BOBA
+  // getBobaDetails () {
+  //   this.state.orderName="GIMME BOBBBBAAAAA";
+  // }
+ 
   render() {
+    // this.state.orderName="GIMME BOBBBBAAAAA";
+
     return (
       <div>
-        <h1>This is where my boba will go.</h1>
+        <h1>This is where my boba Object will go.</h1>
         <h3>{Object.values(this.state.myReview).join(",")}</h3>
         <h2>{this.state.orderName}</h2>
         <h2>{this.state.bobaShop}</h2>
