@@ -2,64 +2,39 @@
 <html>
   <head>
     <link rel='stylesheet' href='./main.css'>
+    
   </head>
   <body>
-      <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-      <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-          ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
     <title>Welcome!</title>
     <h1>Boba By Numbers: Bay Area Edition</h1>
     <div id='root'></div>
     <!--Chart Placement[2]-->
     <!-- Testing out Zingchart implementation. -->
     <!-- <div id ='chartDiv'></div> -->
+    <div id = "slider-container">
+      <label for="sweetness">Sweetness</label>
+      <input id="sweetness" type="range" min="1" max="10" class="slider">
+      <label for="tapioca-quality">Tapioca Quality</label>
+      <input id="tapioca-quality" type="range" min="1" max="10" class="slider">
+      <label for="tea-flavor">Tea Flavor</label>
+      <input id="tea-flavor" type="range" min="1" max="10" class="slider">
+      <label for="overall-value">Overall Value</label>
+      <input id="overall-value" type="range" min="1" max="10" class="slider">
+      <label for="aesthetic">Aesthetic</label>
+      <input id="aesthetic" type="range" min="1" max="10" class="slider">
+      <label for="fruit-flavor">Fruit Flavor</label>
+      <input id="fruit-flavor" type="range" min="1" max="10" class="slider">
+    </div>
     <div id='myChart'></div>
-
-    <!-- <script>
-      var chartData={
-        "type":"bar",  // Specify your chart type here.
-        "series":[  // Insert your series data here.
-            { "values": [35, 42, 67, 89]},
-            { "values": [28, 40, 39, 36]}
-        ]
-      };
-      zingchart.render({ // Render Method[3]
-        id:'chartDiv',
-        data:chartData,
-        height:400,
-        width:600
-      });
-    </script> -->
-    <script>
-      var myConfig = {
-        "type":"radar",
-        "plot":{
-          "aspect":"area",
-          "animation": {"effect": 3}
-        },
-        "scale-k": {
-          "labels": ["sweetness","Tapioca Quality","Tea Strength","Value","Aesthetic","Fruit Flavor"]
-        },
-        "series":[
-          {
-            "values":[59,30,65,34,40,60]
-          },
-          {
-            "values":[76,60,11,21,99,70]
-          }
-        ]
-      };
-
-      zingchart.render({ 
-        id : 'myChart', 
-        data : myConfig, 
-        height: '100%', 
-        width: '100%' 
-      });
-
-    </script>
     <footer>Made by Hannah Kang</footer>
     <h1>Lower Nav Bar will go at base of page</h1>
     
   </body>
 </html>
+
+<!-- ITEMS MARKED FOR DELETION -->
+<!-- Successfully imported in dependencies, will delete -->
+      <!-- <script src="../node_modules/zingchart/client/zingchart.min.js"></script>   -->
+    <!-- <script src="https://cdn.zingchart.com/zingchart.min.js"></script> -->
+      <!-- <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+          ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script> -->
