@@ -1,37 +1,29 @@
 import React, {Component} from 'react';
 import { render} from 'react-dom';
-
-// var myConfig = {
-//   "type": "radar",
-//   "series": [{
-//       "values": [59, 30, 65, 34, 40]
-//   }, {
-//       "values": [76, 60, 11, 21, 99]
-//   }, {
-//       "values": [34, 0, 0, 30, 10]
-//   }]
-// };
-
-// zingchart.render({ 
-// id : 'myChart', 
-// data : myConfig, 
-// height: '100%', 
-// width: '100%' 
-// });
+import zingchart from 'zingchart'
 
 
 const DEFAULT_BOBA = {
   myReview : {
     tapiocaQuality:0,
     sweetness:100,
-    teaFlavor:23,
-    fruitFlavor:14,
-    overallValue:53,
+    teaFlavor:50,
+    fruitFlavor:50,
+    overallValue:50,
     aesthetic:123,
   },
+  // myReviewAsList: [
+  //   this.myReview.sweetness,
+  //   this.myReview.tapiocaQuality,
+  //   this.myReview.teaFlavor,
+  //   this.myReview.overallValue,
+  //   this.myReview.aesthetic,
+  //   this.myReview.fruitFlavor
+  // ],
   orderName: "ORDER NAME",
   bobaShop: "TAKE YOU TO THE BOBA SHOP"
 }
+console.log(DEFAULT_BOBA.myReviewAsList);
 
 class MyBoba extends Component {
   state = DEFAULT_BOBA
@@ -55,4 +47,26 @@ render(
 );
 
 
-console.log("WE OUT HERE")
+var myConfig = {
+  "type":"radar",
+  "plot":{
+    "aspect":"area",
+    "animation": {"effect": 3}
+  },
+  "scale-k": {
+    "labels": ["sweetness","Tapioca Quality","Tea Strength","Value","Aesthetic","Fruit Flavor"]
+  },
+  "series":[
+    {
+      "values":[59,30,65,34,40,60]
+    }
+  ]
+};
+
+// myConfig["series"][0]["values"]=[100,100,100,100,100,100];
+zingchart.render({ 
+  id : 'myChart', 
+  data : myConfig, 
+  height: '100%', 
+  width: '100%' 
+});
