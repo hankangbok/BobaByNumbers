@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import zingchart from 'zingchart';
-import BobaSlider from './components/bobaSlider';
+// import zingchart from 'zingchart';
+// import BobaSlider from './components/bobaSlider';
 import BobaForm from './components/bobaForm';
 // import { SingleReview } from './components/myChart';
 // Currently testing Boba object creation
@@ -59,29 +59,29 @@ render(
   </div>,
   document.getElementById('root')
 );
-const mySeriesValues = [59, 30, 65, 34, 40, 60];
+// const mySeriesValues = [59, 30, 65, 34, 40, 60];
 
 
-var myConfig = {
-  "type": "radar",
-  "plot": {
-    "aspect": "area",
-    "animation": { "effect": 3 }
-  },
-  "scale-k": {
-    "labels": ["sweetness", "Tapioca Quality", "Tea Strength", "Value", "Aesthetic", "Fruit Flavor"]
-  },
-  "series": [
-    {
-      "values": mySeriesValues
-    }
-  ]
-};
+// var myConfig = {
+//   "type": "radar",
+//   "plot": {
+//     "aspect": "area",
+//     "animation": { "effect": 3 }
+//   },
+//   "scale-k": {
+//     "labels": ["sweetness", "Tapioca Quality", "Tea Strength", "Value", "Aesthetic", "Fruit Flavor"]
+//   },
+//   "series": [
+//     {
+//       "values": mySeriesValues
+//     }
+//   ]
+// };
 
-// myConfig["series"][0]["values"]=[100,100,100,100,100,100];
-zingchart.render({
-  id: 'myChart',
-  data: myConfig,
-  height: '100%',
-  width: '100%'
-});
+// // myConfig["series"][0]["values"]=[100,100,100,100,100,100];
+// zingchart.render({
+//   id: 'myChart',
+//   data: myConfig,
+//   height: '100%',
+//   width: '100%'
+// });
