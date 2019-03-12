@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import zingchart from 'zingchart'
+import zingchart from 'zingchart';
+import BobaSlider from './components/bobaSlider';
+import BobaForm from './components/bobaForm';
+// import { SingleReview } from './components/myChart';
 // Currently testing Boba object creation
 // Each Boba object should be rendered in a radar type zingchart
 
@@ -17,35 +20,8 @@ const DEFAULT_BOBA = {
   orderName: "ORDER NAME",
   bobaShop: "TAKE YOU TO THE BOBA SHOP"
 }
-
-// A slider for each boba review criteria
-// Should have a slider, criteria label, and value label that updates with new selection
-class BobaSlider extends Component {
-  state = {
-    value: 0,
-    name: this.props.name || "name"
-  }
-  // Updates text display of the slider value.  
-  updateValue() {
-    let slider = document.getElementById("example-slider");
-    this.setState({ value: slider.value });
-  }
-
-  render() {
-
-    return (
-      <div>
-        <label for="example-slider">{this.state.name}</label>
-        <input id="example-slider" onInput={this.updateValue.bind(this)} type="range" min="1" max="10" class="slider"></input>
-        <p>Value: <span id="slider-value" >${this.state.value}</span></p>
-      </div>
-    );
-  }
-}
-
-class 
 class MyBoba extends Component {
-  state = DEFAULT_BOBA
+  state = DEFAULT_BOBA;
   // getBobaDetails () {
   //   this.state.orderName="GIMME BOBBBBAAAAA";
   // }
@@ -64,18 +40,26 @@ class MyBoba extends Component {
   }
 }
 
+// render(
+//   <div>
+//     <MyBoba />
+//     <BobaSlider name="Sweetness" id="sweetness"/>
+//     <BobaSlider name="Tapioca Quality" id="tapioca-quality"/>
+//     <BobaSlider name="Tea Flavor" id="tea-flavor"/>
+//     <BobaSlider name="Overall Value" id="overall-value"/>
+//     <BobaSlider name="Aesthetic" id="aesthetic" />
+//     <BobaSlider name="Fruit Flavor" id="fruit-flavor" />
+//   </div>,
+//   document.getElementById('root')
+// );
 render(
   <div>
     <MyBoba />
-    <BobaSlider name="Sweetness"/>
-    <BobaSlider name="Tapioca Quality"/>
-    <BobaSlider name="Tea Flavor"/>
-    <BobaSlider name="Overall Value"/>
-    <BobaSlider name="Aesthetic"/>
-    <BobaSlider name="Fruit Flavor"/>
+    <BobaForm />
   </div>,
   document.getElementById('root')
 );
+const mySeriesValues = [59, 30, 65, 34, 40, 60];
 
 
 var myConfig = {
@@ -89,7 +73,7 @@ var myConfig = {
   },
   "series": [
     {
-      "values": [59, 30, 65, 34, 40, 60]
+      "values": mySeriesValues
     }
   ]
 };

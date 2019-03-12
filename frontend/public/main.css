@@ -11,15 +11,22 @@ body,
   height:100%;
 }
 
-/* body {
+#myChart {
+  min-width: 90%;
+  min-height: 90%;
+  width:90%;
+  height:90%;
+}
+
+body {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-} */
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
 
 div {
-  border: 5px solid red;
+  border: 5px solid pink;
   /* Change px values to percentages later on */
   padding: 10px;
 }
@@ -27,6 +34,5 @@ div {
 .slider {
   width: 100%;
   outline:none;
-  
 }
 
